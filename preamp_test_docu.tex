@@ -1,0 +1,404 @@
+\documentclass{report}
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=20mm,
+ top=20mm,
+ }
+
+% Damit die Verwendung der deutschen Sprache nicht ganz so umst\"andlich wird,
+% sollte man die folgenden Pakete einbinden: 
+\usepackage[latin1]{inputenc}% erm\"oglich die direkte Eingabe der Umlaute 
+\usepackage[T1]{fontenc} % das Trennen der Umlaute
+\usepackage{ngerman} % hiermit werden deutsche Bezeichnungen genutzt und 
+                     % die W\"orter werden anhand der neue Rechtschreibung 
+             % automatisch getrennt. 
+\usepackage{graphicx}
+\usepackage{comment}
+\graphicspath{ {./test_preamp/} }
+\usepackage{subcaption}
+\newcommand{\sectionbreak}{\clearpage}
+\usepackage[section]{placeins}
+\title{Documentation Preamps testing}
+
+
+\date{26.03.2021}
+% Hinweis: \title{um was auch immer es geht}, \author{wer es auch immer 
+% geschrieben hat} und  \date{wann auch immer das war} k\"onnen vor 
+% oder nach dem  Kommando \begin{document} stehen 
+% Aber der \maketitle Befehl mu\ss{} nach dem \begin{document} Kommando stehen! 
+\begin{document}
+
+\maketitle
+
+
+
+
+\section{Setup}
+For this testing the setup of the FOPRA was used. The preamps were tested on the big box with the five large crystals inside. The small box (with 8 small crystals) was used as reference to check if there are RCBus interferences. As the five crystals of the large box are connected to one single Sub-D connector, the signal processing from the APDs to the output of the MPRB could only be tested for 5 channels on the Preamp card 0. For all other channels the test was done solely using the pulser. As pulser signal a square signal shape (low end: 0mV, high end: 10mV, 50\% duty) with frequency of 250 Hz.
+
+The tested Preamps were labeled from 1 to 6 (see green label on the Preamps).
+
+\newpage
+
+\section{Test Results} \label{documentclasses}
+All following plots are uncalibrated lim\textunderscore energy plots. The pulser peak can be identified as the most right peak in the plots.
+\subsection{FOPRA Preamp}
+
+\begin{figure}[!htb]
+  \includegraphics[width=\linewidth]{fopra_preamp_lim_energy_card0_all.png}
+  \caption{FOPRA Preamp, card 0, all channels, Na22 source  with pulser.}
+\end{figure}
+
+\begin{figure}[!htb]
+  \centering
+  \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\linewidth]{fopra_preamp_lim_energy_card0_ch0.png}
+    \caption{FOPRA Preamp,card 0, channel 0, Na22 source with pulser.}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\linewidth]{fopra_preamp_lim_energy_card0_ch4_no_crystal.png}
+    \caption{FOPRA Preamp,card 0, channel 4,no crystal, only pulser.}
+  \end{subfigure}
+\end{figure}
+
+\begin{figure}[!htb]
+  \includegraphics[width=\linewidth]{fopra_preamp_lim_energy_card1_all.png}
+  \caption{FOPRA Preamp, card 1, all channels, no crystal, only pulser.}
+\end{figure}
+
+\begin{figure}[!htb]
+  \centering
+  \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\linewidth]{fopra_preamp_ref_ch0.png}
+	  \caption{Reference Preamp, card 0, channel 0, Na22 source (far away), no pulser.}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.4\textwidth}
+    \includegraphics[width=\linewidth]{fopra_preamp_ref_ch1_no_crystal.png}
+    \caption{Reference Preamp, card 0, channel 4,no crystal, no pulser.}
+  \end{subfigure}
+  \caption{Small Box reference for FOPRA Preamp.}
+\end{figure}
+
+\newpage
+\clearpage
+\subsection{Preamp 1}
+\begin{figure}[!htb]
+  \includegraphics[width=\linewidth]{preamp1_lim_energy_card0_all.png}
+  \caption{Preamp 1, card 0, all channels, Na22 source  with pulser.}
+\end{figure}
+
+\begin{figure}[!htb]
+  \centering
+  \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\linewidth]{preamp1_lim_energy_card0_ch0.png}
+    \caption{Preamp 1,card 0, channel 0, Na22 source with pulser.}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\linewidth]{preamp1_lim_energy_card0_ch4_no_crystal.png}
+    \caption{Preamp 1,card 0, channel 4,no crystal, only pulser.}
+  \end{subfigure}
+\end{figure}
+
+\begin{figure}[!htb]
+  \includegraphics[width=\linewidth]{preamp1_lim_energy_card1_all.png}
+  \caption{Preamp 1, card 1, all channels, no crystal, only pulser.}
+\end{figure}
+
+\begin{figure}[!htb]
+  \centering
+  \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\linewidth]{preamp1_ref_ch0.png}
+          \caption{Reference Preamp, card 0, channel 0, Na22 source (far away), no pulser.}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.4\textwidth}
+    \includegraphics[width=\linewidth]{preamp1_ref_ch1_no_crystal.png}
+    \caption{Reference Preamp, card 0, channel 4,no crystal, no pulser.}
+  \end{subfigure}
+  \caption{Small Box reference for Preamp 1.}
+\end{figure}
+\newpage
+\clearpage
+\subsection{Preamp 2}
+\begin{figure}[!htb]
+  \includegraphics[width=\linewidth]{preamp2_lim_energy_card0_all.png}
+  \caption{Preamp 2, card 0, all channels, Na22 source  with pulser.}
+\end{figure}
+
+\begin{figure}[!htb]
+  \centering
+  \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\linewidth]{preamp2_lim_energy_card0_ch0.png}
+    \caption{Preamp 2,card 0, channel 0, Na22 source with pulser.}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\linewidth]{preamp2_lim_energy_card0_ch4_no_crystal.png}
+    \caption{Preamp 2,card 0, channel 4,no crystal, only pulser.}
+  \end{subfigure}
+\end{figure}
+
+\begin{figure}[!htb]
+  \includegraphics[width=\linewidth]{preamp2_lim_energy_card1_all.png}
+  \caption{Preamp 2, card 1, all channels, no crystal, only pulser.}
+\end{figure}
+
+\begin{figure}[!htb]
+  \centering
+  \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\linewidth]{preamp2_ref_ch0.png}
+          \caption{Reference Preamp, card 0, channel 0, Na22 source (far away), no pulser.}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.4\textwidth}
+    \includegraphics[width=\linewidth]{preamp2_ref_ch1_no_crystal.png}
+    \caption{Reference Preamp, card 0, channel 4,no crystal, no pulser.}
+  \end{subfigure}
+  \caption{Small Box reference for Preamp 2.}
+\end{figure}
+\newpage
+\clearpage
+\subsection{Preamp 3}
+\begin{figure}[!htb]
+  \includegraphics[width=\linewidth]{preamp3_lim_energy_card0_all.png}
+  \caption{Preamp 3, card 0, all channels, Na22 source  with pulser.}
+\end{figure}
+
+\begin{figure}[!htb]
+  \centering
+  \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\linewidth]{preamp3_lim_energy_card0_ch0.png}
+    \caption{Preamp 3,card 0, channel 0, Na22 source with pulser.}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\linewidth]{preamp3_lim_energy_card0_ch4_no_crystal.png}
+    \caption{Preamp 3,card 0, channel 4,no crystal, only pulser.}
+  \end{subfigure}
+\end{figure}
+
+\begin{figure}[!htb]
+  \includegraphics[width=\linewidth]{preamp3_lim_energy_card1_all.png}
+  \caption{Preamp 3, card 1, all channels, no crystal, only pulser.}
+\end{figure}
+
+\begin{figure}[!htb]
+  \centering
+  \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\linewidth]{preamp3_ref_ch0.png}
+          \caption{Reference Preamp, card 0, channel 0, Na22 source (far away), no pulser.}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.4\textwidth}
+    \includegraphics[width=\linewidth]{preamp3_ref_ch1_no_crystal.png}
+    \caption{Reference Preamp, card 0, channel 4,no crystal, no pulser.}
+  \end{subfigure}
+  \caption{Small Box reference for Preamp 3.}
+\end{figure}
+\newpage
+\clearpage
+\subsection{Preamp 4}
+\begin{figure}[!htb]
+  \includegraphics[width=\linewidth]{preamp4_lim_energy_card0_all.png}
+  \caption{Preamp 4, card 0, all channels, Na22 source  with pulser.}
+\end{figure}
+
+\begin{figure}[!htb]
+  \centering
+  \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\linewidth]{preamp4_lim_energy_card0_ch0.png}
+    \caption{Preamp 4,card 0, channel 0, Na22 source with pulser.}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\linewidth]{preamp4_lim_energy_card0_ch4_no_crystal.png}
+    \caption{Preamp 4,card 0, channel 4,no crystal, only pulser.}
+  \end{subfigure}
+\end{figure}
+
+\begin{figure}[!htb]
+  \includegraphics[width=\linewidth]{preamp4_lim_energy_card1_all.png}
+  \caption{Preamp 4, card 1, all channels, no crystal, only pulser.}
+\end{figure}
+
+\begin{figure}[!htb]
+  \centering
+  \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\linewidth]{preamp4_ref_ch0.png}
+          \caption{Reference Preamp, card 0, channel 0, Na22 source (far away), no pulser.}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.4\textwidth}
+    \includegraphics[width=\linewidth]{preamp4_ref_ch1_no_crystal.png}
+    \caption{Reference Preamp, card 0, channel 4,no crystal, no pulser.}
+  \end{subfigure}
+  \caption{Small Box reference for Preamp 4.}
+\end{figure}
+\newpage
+\clearpage
+\subsection{Preamp 5}
+\begin{figure}[!htb]
+  \includegraphics[width=\linewidth]{preamp5_lim_energy_card0_all.png}
+  \caption{Preamp 5, card 0, all channels, Na22 source  with pulser.}
+\end{figure}
+
+\begin{figure}[!htb]
+  \centering
+  \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\linewidth]{preamp5_lim_energy_card0_ch0.png}
+    \caption{Preamp 5,card 0, channel 0, Na22 source with pulser.}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\linewidth]{preamp5_lim_energy_card0_ch4_no_crystal.png}
+    \caption{Preamp 5,card 0, channel 4,no crystal, only pulser.}
+  \end{subfigure}
+\end{figure}
+
+\begin{figure}[!htb]
+  \includegraphics[width=\linewidth]{preamp5_lim_energy_card1_all.png}
+  \caption{Preamp 5, card 1, all channels, no crystal, only pulser.}
+\end{figure}
+
+\begin{figure}[!htb]
+  \centering
+  \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\linewidth]{preamp5_ref_ch0.png}
+          \caption{Reference Preamp, card 0, channel 0, Na22 source (far away), no pulser.}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.4\textwidth}
+    \includegraphics[width=\linewidth]{preamp5_ref_ch1_no_crystal.png}
+    \caption{Reference Preamp, card 0, channel 4,no crystal, no pulser.}
+  \end{subfigure}
+  \caption{Small Box reference for Preamp 5.}
+\end{figure}
+\newpage
+\clearpage
+
+
+
+
+\subsection{Preamp 6 (Dual Range)}
+
+\begin{figure}[!htb]
+  \includegraphics[width=\linewidth]{/dr_latest_test/preamp6_lim_energy_card0_all_no_pulser.png}
+  \caption{Preamp 6, card 1, all channels, Na22 source  no pulser.}
+\end{figure}
+\begin{figure}[!htb]
+  \includegraphics[width=\linewidth]{dr_latest_test/preamp6_lim_energy_card0_pulser.png}
+  \caption{Preamp 6, card 1, all channels, Na22 source with pulser.}
+\end{figure}
+\begin{figure}[!htb]
+  \includegraphics[width=\linewidth]{dr_latest_test/preamp6_lim_energy_card1_all_no_pulser.png}
+  \caption{Preamp 6, card 1, all channels, Na22 source  no pulser.}
+\end{figure}
+\begin{figure}[!htb]
+  \includegraphics[width=\linewidth]{dr_latest_test/preamp6_lim_energy_card1_pulser.png}
+  \caption{Preamp 6, card 1, all channels, Na22 source with pulser.}
+\end{figure}
+\newpage
+\clearpage
+
+\subsection{Preamp 7 (Dual Range)}
+\begin{figure}[!htb]
+  \includegraphics[width=\linewidth]{dr_latest_test/preamp7_lim_energy_card0_all_no_pulser.png}
+  \caption{Preamp 7, card 0, all channels, Na22 source  no pulser.}
+\end{figure}
+\begin{figure}[!htb]
+  \includegraphics[width=\linewidth]{dr_latest_test/preamp7_lim_energy_card0_pulser.png}
+  \caption{Preamp 7, card 0, all channels, Na22 source with pulser.}
+\end{figure}
+\begin{figure}[!htb]
+  \includegraphics[width=\linewidth]{dr_latest_test/preamp7_lim_energy_card1_all_no_pulser.png}
+  \caption{Preamp 7, card 1, all channels, Na22 source  no pulser.}
+\end{figure}
+\begin{figure}[!htb]
+  \includegraphics[width=\linewidth]{dr_latest_test/preamp7_lim_energy_card1_pulser.png}
+  \caption{Preamp 7, card 1, all channels, Na22 source with pulser.}
+\end{figure}
+\newpage
+\clearpage
+
+\subsection{Preamp 8 (Dual Range)}
+\begin{figure}[!htb]
+  \includegraphics[width=\linewidth]{dr_latest_test/preamp8_lim_energy_card0_all_no_pulser.png}
+  \caption{Preamp 8, card 0, all channels, Na22 source  no pulser.}
+\end{figure}
+\begin{figure}[!htb]
+  \includegraphics[width=\linewidth]{dr_latest_test/preamp8_lim_energy_card0_pulser.png}
+  \caption{Preamp 8, card 0, all channels, Na22 source with pulser.}
+\end{figure}
+\begin{figure}[!htb]
+  \includegraphics[width=\linewidth]{dr_latest_test/preamp8_lim_energy_card1_all_no_pulser.png}
+  \caption{Preamp 8, card 1, all channels, Na22 source  no pulser.}
+\end{figure}
+\begin{figure}[!htb]
+  \includegraphics[width=\linewidth]{dr_latest_test/preamp8_lim_energy_card1_pulser.png}
+  \caption{Preamp 8, card 1, all channels, Na22 source with pulser.}
+\end{figure}
+\newpage
+\clearpage
+
+\subsection{Preamp 9 (Dual Range)}
+\begin{figure}[!htb]
+  \includegraphics[width=\linewidth]{dr_latest_test/preamp9_lim_energy_card0_all_no_pulser.png}
+  \caption{Preamp 9, card 0, all channels, Na22 source  no pulser.}
+\end{figure}
+\begin{figure}[!htb]
+  \includegraphics[width=\linewidth]{dr_latest_test/preamp9_lim_energy_card0_pulser.png}
+  \caption{Preamp 9, card 0, all channels, Na22 source with pulser.}
+\end{figure}
+\begin{figure}[!htb]
+  \includegraphics[width=\linewidth]{dr_latest_test/preamp9_lim_energy_card1_all_no_pulser.png}
+  \caption{Preamp 9, card 1, all channels, Na22 source  no pulser.}
+\end{figure}
+\begin{figure}[!htb]
+  \includegraphics[width=\linewidth]{dr_latest_test/preamp9_lim_energy_card1_pulser.png}
+  \caption{Preamp 9, card 1, all channels, Na22 source with pulser.}
+\end{figure}
+\newpage
+\clearpage
+
+\subsection{Preamp 10}
+\begin{figure}[!htb]
+  \includegraphics[width=\linewidth]{small_box_card0_all_nopulser.png}
+  \caption{Preamp 10, card 0, all channels, Na22 source  no pulser.}
+\end{figure}
+\begin{figure}[!htb]
+  \includegraphics[width=\linewidth]{small_box_card0_all.png}
+  \caption{Preamp 10, card 0, all channels, Na22 source with pulser.}
+\end{figure}
+\begin{figure}[!htb]
+  \includegraphics[width=\linewidth]{small_box_card1_all_nopulser.png}
+  \caption{Preamp 10, card 1, all channels, Na22 source  no pulser.}
+\end{figure}
+\begin{figure}[!htb]
+  \includegraphics[width=\linewidth]{small_box_card1_all.png}
+  \caption{Preamp 10, card 1, all channels, Na22 source with pulser.}
+\end{figure}
+\newpage
+\clearpage
+
+
+
+\section{Summary}
+Preamp 1, seems to be noisy in both cards (0,1), bad resolultion.\newline
+Preamp 2 seems to be ok.\newline
+Preamp 3 seems to be ok.\newline
+Preamp 4 seems to be ok. The power supply plug misses one screw. This has to be replaced.\newline
+Preamp 5, card 0: here we have missing channels 5 and 9. Everything else ok.\newline
+FOPRA Preamp, card 1: channel 10 noisy/broken (for the FOPRA this is irrelevant).\newline
+
+Over the whole testing period no RCBus interference effects were observed.
+
+
+\section{Updated Summary}
+Preamp 1, seems to be noisy in both cards (0,1), bad resolultion.\newline
+Preamp 2 seems to be ok. It's used for FOPRA\newline
+Preamp 3 seems to be ok. It's now at the GSI\newline
+Preamp 4 seems to be ok. It's now at the GSI\newline
+Preamp 5, card 0: here we have missing channels 5 and 9. Everything else ok.\newline
+FOPRA Preamp, card 1: channel 10 noisy/broken (for the FOPRA this is irrelevant).\newline
+Preamp 6, card 0: 9,10,11,12,15 channels are noisy. card 1: 7,8,9,10,11,12,15 channels are noisy.\newline
+Preamp 7, card 1: 0,7,8,10,13,14,15 channels are noisy\newline
+Preamp 8, card0: 8,9,10,11,12,15 channels are noisy. card1: all channels noisy\newline
+Preamp 9 seems to be ok.\newline
+Preamp10,card 0: 10,11,15 channels noisy.\newline
+
+\end{document}
+                                                                                                                                                                                          73,1          Bot
+

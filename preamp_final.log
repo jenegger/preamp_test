@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2021.3.26)  10 MAY 2021 14:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.3.13)  10 MAY 2021 17:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **preamp_final.tex
 (./preamp_final.tex
 LaTeX2e <2017-04-15>
-Babel <3.18> and hyphenation patterns for 10 language(s) loaded.
+Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/report.cls
 Document Class: report 2014/09/29 v1.4h Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
@@ -72,8 +72,7 @@ LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
 (/usr/share/texlive/texmf-dist/tex/generic/german/ngerman.sty v2.5e 1998-07-08
 Package: ngerman 1998/07/08 v2.5e Support for writing german texts (br)
 \grmnU@D=\dimen111
-ngerman -- \language number for naustrian undefined, default 6 used.
-ngerman -- \language number for French undefined, default 255 used.
+ngerman -- \language number for naustrian undefined, default 40 used.
 ) (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
 
@@ -348,7 +347,7 @@ n input line 116.
  [11
 
  <./test_preamp/small_box_card0_all_nopulser.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 125--127
+Underfull \hbox (badness 10000) in paragraph at lines 125--128
 
  []
 
@@ -527,24 +526,23 @@ png  used on input line 251.
 rc_bus_test/preampfopra_card0_gamma_all.png> <./test_preamp/rc_bus_test/preampf
 opra_card1_gamma_all.png>] (./preamp_final.aux) ) 
 Here is how much of TeX's memory you used:
- 3681 strings out of 494830
- 60629 string characters out of 6177367
- 114090 words of memory out of 5000000
- 6951 multiletter control sequences out of 15000+600000
+ 3680 strings out of 492982
+ 60621 string characters out of 6134896
+ 118597 words of memory out of 5000000
+ 7177 multiletter control sequences out of 15000+600000
  10990 words of font info for 29 fonts, out of 8000000 for 9000
- 36 hyphenation exceptions out of 8191
+ 1141 hyphenation exceptions out of 8191
  42i,6n,40p,1137b,261s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/tobiasjenegger/.texliv
-e2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/tobiasjenegg
-er/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </home/to
-biasjenegger/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk>
- </home/tobiasjenegger/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1
-200.600pk> </home/tobiasjenegger/.texlive2017/texmf-var/fonts/pk/ljfour/jknappe
-n/ec/ecrm1728.600pk>
-Output written on preamp_final.pdf (29 pages, 499488 bytes).
+{/usr/share/texmf/fonts/enc/dv
+ips/cm-super/cm-super-t1.enc}</usr/share/texmf/fonts/type1/public/cm-super/sfbx
+1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share
+/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf/fonts/type1/p
+ublic/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1
+728.pfb>
+Output written on preamp_final.pdf (29 pages, 535669 bytes).
 PDF statistics:
- 289 PDF objects out of 1000 (max. 8388607)
- 86 compressed objects within 1 object stream
+ 146 PDF objects out of 1000 (max. 8388607)
+ 82 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  131 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -124,7 +124,7 @@ To repair: card0 channels 8,9,10,11,12,15 (FEBEXCh. 7,8,10,13,14,15) are noisy.
 \section{RC-Bus Test - Setup}
 For this test the preamps were detached from the detectors, they were operated free-standing. The gamma\textunderscore discr\textunderscore threshold was lowered to 100  (instead of 500, as before) to be able to identify more accurately noise caused from remote control requests. For the remote control requests a small python script using the pySerial API was employed. For the test all available preamp parameters were read individually, in a row and other combinations. All preamps were affected by noise when requesting the \dq Temp\textunderscore slope \dq{} or \dq Temp\textunderscore offset \dq{} parameter, or when requesting both of them in a loop. When putting \dq Temp\textunderscore slope \dq{} or \dq Temp\textunderscore offset \dq{} parameter in front of a requesting loop (e.g.: ask Temp\textunderscore slope, Voltage 8, Sum current) the noise effect was also observed. Setting the \dq Temp\textunderscore slope\dq{} or \dq Temp\textunderscore offset\dq{} parameter read request not in front of a requesting loop (e.g: ask Voltage 8,Temp\textunderscore slope,Sum current), no noise was observed.\newline
 The following plots show the noise effect in the preamp channels  when requesting \dq Temp\textunderscore offset\dq{} with a frequency of 5 Hz. In all preamps the channels 1,2,3 (FEBEXCh. 6,5,4) are affected by the remote control request in decreasing magnitude.\newline
-
+The plots are all in the 1pC and 3pC range as no signal is detected beyond this region.\newline
 
 \subsection{Preamp 1, Max. Range 3pC/30pC}
 \begin{figure}[!htb]
